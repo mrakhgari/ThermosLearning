@@ -1,0 +1,73 @@
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-02-23 19:30:17,392] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/routes.py", line 21, in index
+    return render_template( 'index.html', title='Home', user=user, posts=posts)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/templates/base.html", line 12, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/templates/index.html", line 4, in block "content"
+    <h1>Hi, {{ username.user }}!</h1>
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'username' is undefined
+127.0.0.1 - - [23/Feb/2020 19:30:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2020-02-23 19:31:34,033] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/routes.py", line 21, in index
+    return render_template( 'index.html', title='Home', user=user, posts=posts)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/templates/base.html", line 12, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/muhmdreza/Desktop/ThermosLearning/microblog/app/templates/index.html", line 4, in block "content"
+    <h1>Hi, {{ user.username }}!</h1>
+  File "/home/muhmdreza/.local/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'username' is undefined
+127.0.0.1 - - [23/Feb/2020 19:31:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
