@@ -1,5 +1,7 @@
 from flask import render_template
 from app import app
+# from froms import LoginForm
+from app.forms import LoginForm
 
 # when called http://127.0.0.1:5000/ or http://127.0.0.1:5000/index called this method
 @app.route('/')
@@ -19,3 +21,9 @@ def index():
     ]
     # to render the index.html in template folder use this method.
     return render_template( 'index.html', title='Home', user=user, posts=posts)
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
+
